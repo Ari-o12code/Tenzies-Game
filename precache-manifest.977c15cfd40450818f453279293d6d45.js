@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "72dc339b668a08833fb8",
-    "url": "/Tenzies-Game/static/css/main.68a92a88.chunk.css"
+    "revision": "d3fe0a8e6142c5fd4944",
+    "url": "/Tenzies-Game/static/css/main.e23d01ad.chunk.css"
   },
   {
-    "revision": "72dc339b668a08833fb8",
-    "url": "/Tenzies-Game/static/js/main.72dc339b.chunk.js"
+    "revision": "d3fe0a8e6142c5fd4944",
+    "url": "/Tenzies-Game/static/js/main.d3fe0a8e.chunk.js"
   },
   {
     "revision": "f99921d68d7ebc942685",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/Tenzies-Game/static/js/runtime~main.f49e5bc8.js"
   },
   {
-    "revision": "9938963863cd03e2d32bf22c049de963",
+    "revision": "b50e687ce0ab008d75941ef8afc95c7f",
     "url": "/Tenzies-Game/index.html"
   }
 ];
