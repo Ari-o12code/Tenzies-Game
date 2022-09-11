@@ -25,6 +25,11 @@ const Main = () => {
 
 const[diceNum, setDiceNum] = useState(allNewDice()) 
 const [tenzies, setTenzies] = useState(false)
+const[count, setCount] = useState(0)
+
+const numOfRolls = ()=>{
+    setCount(prevCount => prevCount + 1)
+}
 
 const dieHeld = diceNum.every(die => die.isHeld)
 useEffect(()=>{
@@ -37,9 +42,11 @@ useEffect(()=>{
 }, [diceNum])
 
 const rollDice = ()=>{
+    if (!tenzies){numOfRolls()}
     if(!tenzies){setDiceNum(oldDiceNum => oldDiceNum.map(die => {
         return die.isHeld? die : generateNum()
     }))}else{
+        setCount(0)
         setTenzies(false)
         setDiceNum(allNewDice)
     }
@@ -61,7 +68,7 @@ const holdDice = (id)=>{
         {tenzies && <Confetti />}
         <div className='inner-box'>
             <h1 className='head-text tc'>Tenzies</h1>
-            {tenzies ? <h2 className='won-text'>YOU WON!!!</h2> : <p className='text tc'>
+            {tenzies ? <h2 className='won-text'>You won in just {count} rolls!</h2> : <p className='text tc'>
             Roll until all dice are the same. 
             Click each die to freeze it at its current 
             value between rolls.</p>}
